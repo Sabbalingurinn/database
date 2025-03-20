@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "prisma migrate dev --name init && tsc",
-    "start": "node ./dist/src/index.js %% node ./dist/prisma/seed.js",
+    "start": "prisma db seed && node ./dist/src/index.js",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest --coverage"
